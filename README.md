@@ -42,6 +42,61 @@ The webhook[gitlab_project] type is:GITLAB,address: http://192.168.180.198:8787/
 ##### 配置好与之对应的钉钉群机器人
 
 ![](https://img2023.cnblogs.com/blog/994599/202306/994599-20230613113119870-930852617.png)
+#### 请求实例:
+```text
+请求头:X-Gitlab-Event:Push Hook
+请求体:
+{
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "8450d14d6adfe34c00eaaa74f38faadaf0bf491e",
+  "after": "0000000000000000000000000000000000000000",
+  "ref": "refs/heads/fix_shopify",
+  "checkout_sha": null,
+  "message": null,
+  "user_id": 70,
+  "user_name": "石朝辉",
+  "user_username": "sch",
+  "user_email": "",
+  "user_avatar": "http://192.168.180.10:9080/uploads/-/system/user/avatar/70/avatar.png",
+  "project_id": 25,
+  "project": {
+    "id": 25,
+    "name": "kte-finance",
+    "description": "财务项目 主要对接用友昭隆ERP (NC系统)",
+    "web_url": "http://192.168.180.10:9080/kte-chengdu-develop/microservice/kte-finance",
+    "avatar_url": "http://192.168.180.10:9080/uploads/-/system/project/avatar/25/财务管理.png",
+    "git_ssh_url": "git@192.168.180.10:kte-chengdu-develop/microservice/kte-finance.git",
+    "git_http_url": "http://192.168.180.10:9080/kte-chengdu-develop/microservice/kte-finance.git",
+    "namespace": "microservice",
+    "visibility_level": 0,
+    "path_with_namespace": "kte-chengdu-develop/microservice/kte-finance",
+    "default_branch": "dev",
+    "ci_config_path": null,
+    "homepage": "http://192.168.180.10:9080/kte-chengdu-develop/microservice/kte-finance",
+    "url": "git@192.168.180.10:kte-chengdu-develop/microservice/kte-finance.git",
+    "ssh_url": "git@192.168.180.10:kte-chengdu-develop/microservice/kte-finance.git",
+    "http_url": "http://192.168.180.10:9080/kte-chengdu-develop/microservice/kte-finance.git"
+  },
+  "commits": [
+
+  ],
+  "total_commits_count": 0,
+  "push_options": {
+  },
+  "repository": {
+    "name": "kte-finance",
+    "url": "git@192.168.180.10:kte-chengdu-develop/microservice/kte-finance.git",
+    "description": "财务项目 主要对接用友昭隆ERP (NC系统)",
+    "homepage": "http://192.168.180.10:9080/kte-chengdu-develop/microservice/kte-finance",
+    "git_http_url": "http://192.168.180.10:9080/kte-chengdu-develop/microservice/kte-finance.git",
+    "git_ssh_url": "git@192.168.180.10:kte-chengdu-develop/microservice/kte-finance.git",
+    "visibility_level": 0
+  }
+}
+
+
+```
 
 #### 通知钉钉群机器人实现效果:
 
